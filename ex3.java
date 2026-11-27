@@ -1,51 +1,28 @@
-package secao3;
+package secao4;
 import java.util.Scanner;
-
 
 public class ex3 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Por favor digite aqui a sua nota para saber em qual classificação se encontra: ");
-        int nota = scanner.nextInt();
+        System.out.println("Digite um número para saber se é primo: ");
+        int num = scanner.nextInt();
 
-        classificacao(nota);
-        
+        boolean eprimo = true;
+
+        for(int i = 2; i < num; i++){
+
+            if(num % i == 0){
+                eprimo = false;
+                break;
+            }
+        }
+
+        if(eprimo){
+            System.out.println("O número " + num + " é primo!");
+        }else{
+            System.out.println("Não é primo!");
+        }
         scanner.close();
-    }
-
-    public static void classificacao(int nota){
-
-        if(nota < 0 || nota > 10){
-            System.out.println("Nota inválida...");
-            return;
-        }
-
-        switch(nota){
-
-            case 10:
-                System.out.println("Parabéns! Você se encontra no grupo A");
-            break;
-
-            case 9:
-                System.out.println("Parabéns! Você se encontra no grupo A");
-            break;
-
-            case 8:
-                System.out.println("Você se encontra no grupo B");
-            break;
-
-            case 7:
-                System.out.println("Você se encontra no grupo C");
-            break;
-
-            case 6:
-                System.out.println("Parabéns! Você se encontra no grupo D");
-            break;
-
-            default:
-                System.out.println("Você se encontra no grupo F");
-            break;
-        }
     }
 }

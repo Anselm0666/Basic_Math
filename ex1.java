@@ -1,22 +1,15 @@
-package secao3;
-import java.util.Scanner;
+package secao4;
 
 public class ex1 {
     public static void main(String[] args) {
+     
+        int somatorio = 0;
 
-        conversao();
-    }
+        for(int i = 0; i < 101; i++){
+            
+            somatorio += i;
+        }     
+        System.out.println(somatorio);
 
-    public static void conversao(){
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.println("Digite uma temperatura em Celsius para converte-la em Fahrenheit: ");
-        Double c = scanner.nextDouble();
-
-        Double f = c * 1.8 + 32;
-
-        System.out.println("Sua temperatura convertida é: " + f + " ºF");
-
-        scanner.close();
     }
 }
