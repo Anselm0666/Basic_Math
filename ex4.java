@@ -1,36 +1,51 @@
-package secao4;
+package secao2;
 import java.util.Scanner;
 
 public class ex4 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("O que procura? \n1) Doces \n2) Bebidas \n3) Lanches \n4) Sair \n");
-        int choice = scanner.nextInt();
-        boolean x = true;
+        System.out.println("Digite um número de 1 a 7 para saber que dia da semana é: ");
+        int day = scanner.nextInt();
 
-       switch(choice){
-        case 1:
-            x = true;
-        break;
-        case 2:
-            x = true;
-        break;
-        case 3:
-            x = true;
-        break;
-        case 4:
-            x = false;
-        break;
-       }
+        switch(day){
 
-        do{
-            System.out.println("Aguarde um momento...");
-        }while(x == true);
+            case 1:
+                System.out.println("Hoje é Domingo.");
+            break; 
 
-        System.out.println("Saindo do sistema...");
-        System.exit(0);
+            case 2:
+                System.out.println("Hoje é Segunda-Feira.");
+            break;
 
+            case 3:
+                System.out.println("Hoje é Terça-Feira.");
+            break;
+
+            case 4:
+                System.out.println("Hoje é Quarta-Feira.");
+            break;
+
+            case 5:
+                System.out.println("Hoje é Quinta-Feira.");
+            break;
+
+            case 6:
+                System.out.println("Hoje é Sexta-Feira.");
+            break;
+
+            case 7:
+                System.out.println("Hoje é Sábado.");
+            break;
+            }
+
+        if(day > 1 && day < 7){
+            System.out.println("Hoje é um dia útil!");
+    }else{
+        System.out.println("Hoje não é um dia útil!");
+        }
+
+        
         scanner.close();
     }
 }

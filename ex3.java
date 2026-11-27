@@ -1,28 +1,22 @@
-package secao4;
+package secao2;
 import java.util.Scanner;
 
 public class ex3 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner (System.in);
 
-        System.out.println("Digite um número para saber se é primo: ");
+        System.out.println("Digite um número para saber se é ímpar ou par: ");
         int num = scanner.nextInt();
+        String result = "";
 
-        boolean eprimo = true;
-
-        for(int i = 2; i < num; i++){
-
-            if(num % i == 0){
-                eprimo = false;
-                break;
-            }
-        }
-
-        if(eprimo){
-            System.out.println("O número " + num + " é primo!");
+        if(num % 2 == 0){
+            result = "par.";
         }else{
-            System.out.println("Não é primo!");
+            result = "ímpar.";
         }
+
+        System.out.println("O número é: " + result);
+
         scanner.close();
     }
 }
