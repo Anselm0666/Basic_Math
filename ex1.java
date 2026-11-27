@@ -1,25 +1,22 @@
-package secao2;
+package secao3;
 import java.util.Scanner;
 
 public class ex1 {
     public static void main(String[] args) {
 
+        conversao();
+    }
+
+    public static void conversao(){
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Por favor insira aqui o preço do produto que deseja comprar: ");
-        double preco = scanner.nextInt();
+        System.out.println("Digite uma temperatura em Celsius para converte-la em Fahrenheit: ");
+        Double c = scanner.nextDouble();
 
-            if (preco < 50){
-                System.out.println(preco);
-                System.out.println("Produto é barato!");
-            }else if (preco >= 50 && preco <= 100){
-                System.out.println(preco);
-                System.out.println("Produto é médio!");
-            }else{
-                System.out.println(preco);
-                System.out.println("Produto é caro!");
-            }
-            scanner.close();
+        Double f = c * 1.8 + 32;
+
+        System.out.println("Sua temperatura convertida é: " + f + " ºF");
+
+        scanner.close();
     }
-    
 }

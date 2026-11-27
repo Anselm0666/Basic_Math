@@ -1,30 +1,27 @@
-package secao2;
+package secao3;
+
 import java.util.Scanner;
 
 public class ex2 {
     public static void main(String[] args) {
-        
-        String ndu = "admin";
-        int senha = 1234;
-
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Por favor digite o nome de usuário: ");
-        String resposta = scanner.nextLine();
+        System.out.println("Por favor digite um número para saber se é par ou ímpar: ");
+        int num = scanner.nextInt();
 
-        if(resposta.equals(ndu)){
-           System.out.println("Por favor digite a senha: ");
-                int resposta2 = scanner.nextInt();
+        paridade(num);
 
-                if(resposta2 != senha){
-                    System.out.println("Acesso negado...");
-                }else{
-                    System.out.println("Seja bem vindo(a) ao sistema!");
-                }
-        }else{
-            System.out.println("Acesso negado...");
-        }
         scanner.close();
+
     }
-    
+
+    public static void paridade(int num){
+
+        if(num % 2 == 0){
+            System.out.println(num + " É par.");
+        }else{
+            System.out.println(num + " É ímpar.");
+        }
+        
+    }
 }

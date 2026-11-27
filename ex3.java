@@ -1,22 +1,51 @@
-package secao2;
+package secao3;
 import java.util.Scanner;
+
 
 public class ex3 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner (System.in);
+        Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Digite um número para saber se é ímpar ou par: ");
-        int num = scanner.nextInt();
-        String result = "";
+        System.out.println("Por favor digite aqui a sua nota para saber em qual classificação se encontra: ");
+        int nota = scanner.nextInt();
 
-        if(num % 2 == 0){
-            result = "par.";
-        }else{
-            result = "ímpar.";
+        classificacao(nota);
+        
+        scanner.close();
+    }
+
+    public static void classificacao(int nota){
+
+        if(nota < 0 || nota > 10){
+            System.out.println("Nota inválida...");
+            return;
         }
 
-        System.out.println("O número é: " + result);
+        switch(nota){
 
-        scanner.close();
+            case 10:
+                System.out.println("Parabéns! Você se encontra no grupo A");
+            break;
+
+            case 9:
+                System.out.println("Parabéns! Você se encontra no grupo A");
+            break;
+
+            case 8:
+                System.out.println("Você se encontra no grupo B");
+            break;
+
+            case 7:
+                System.out.println("Você se encontra no grupo C");
+            break;
+
+            case 6:
+                System.out.println("Parabéns! Você se encontra no grupo D");
+            break;
+
+            default:
+                System.out.println("Você se encontra no grupo F");
+            break;
+        }
     }
 }
