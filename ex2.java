@@ -1,19 +1,27 @@
-package secao4;
+package secao5;
 
 public class ex2 {
     public static void main(String[] args) {
- 
+        int array1[] = {1, 2, 3, 3, 3, 4, 5, 6, 6, 7};
+        int freq = array1[0];
+        int maxcont = 1;
 
-        int nums = 1;
+        for(int i = 0; i < array1.length; i++){
+            int cont = 0;
 
-        while(nums < 20){
-            nums++;
+        for(int j = 0; j < array1.length; j++){
+                if (array1[j] == array1[i]){
+                    cont++;
+                }
+            }
 
-            if(nums % 2 == 0){
-                System.out.println(nums);
-            }else{
-                continue;
+            if(cont > maxcont){
+                maxcont = cont;
+                freq = array1[i];
             }
         }
+
+        System.out.println("O mais frequente é: " + freq);
+
     }
 }

@@ -1,28 +1,24 @@
-package secao4;
-import java.util.Scanner;
+package secao5;
+import java.util.Arrays;
 
 public class ex3 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        int matriz[][] = {
+            {1, 2, 3},
+            {4, 5, 6}
+        };
 
-        System.out.println("Digite um número para saber se é primo: ");
-        int num = scanner.nextInt();
+        int matriz2[][] = new int[matriz[0].length][matriz.length];
 
-        boolean eprimo = true;
-
-        for(int i = 2; i < num; i++){
-
-            if(num % i == 0){
-                eprimo = false;
-                break;
+        
+        for(int i = 0; i < matriz.length; i++){
+            for(int j = 0; j < matriz[0].length; j++){
+                matriz2[j][i] = matriz[i][j];
             }
         }
 
-        if(eprimo){
-            System.out.println("O número " + num + " é primo!");
-        }else{
-            System.out.println("Não é primo!");
+          for(int[] linha : matriz2){
+            System.out.println(Arrays.toString(linha));
         }
-        scanner.close();
     }
 }

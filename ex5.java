@@ -1,22 +1,20 @@
-package secao4;
-import java.util.Scanner;
+package secao5;
+import java.util.Arrays;
+import java.util.ArrayList;
+
 
 public class ex5 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        int array[] = {1, 2, 3, 2, 4, 4, 5};
+        ArrayList<Integer> array2 = new ArrayList<>();
 
-        System.out.println("Digite um número para saber quantos digitos ele possui: ");
-        int num = scanner.nextInt();
-        int contador = 0;
+        System.out.println(Arrays.toString(array));
 
-        while(num != 0){
-            num = num / 10;
-
-            contador++;
+        for(int num : array){
+            if(!array2.contains(num)){
+                array2.add(num);
+            }
         }
-        
-        System.out.println("Número de digitos deste número: " + contador);
-
-        scanner.close();
+        System.out.println(array2);
     }
 }
